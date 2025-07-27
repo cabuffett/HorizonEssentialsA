@@ -5,6 +5,7 @@ meaning it is just the essentials needed for generic stuff. No CMRF code here!
 # What is this?
 This little project of mine is essentially the framework I originally made for CMRF v3, now open source!
 It is bugtested and semi produced by ai with refinements from me. The A Variant is the Web panel, the Loader, and the HE:Adonis Plugins to make it work with my API.
+The loader is index.js, the Web Panel is index.html, and the plugin for adonis is WebPanelListener.lua, ensure these are used in conjuction and not individually.
 
 # AI you say? How dare you!
 I swear to god if any of you say that, you can kiss the open source goodbye. 
