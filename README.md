@@ -22,3 +22,5 @@ Just follow it's instructions.
 Maxwell for bugtesting the B Variant.
 Node.js for the backend.
 
+# Copyright notice for 98.css
+98.css is covered by the MIT License. All portions using 98.css within this part of New Horizons Inc.'s Horizon Essentials are subject to the MIT License agreement.
