@@ -1,2 +1,17 @@
 # HorizonEssentialsA
-The Horizon Essentials Game Framework, Making you feel nostalgic since 2025! A Variant
+The Horizon Essentials Game Framework, Making you feel nostalgic since 2025! This is the A Variant, 
+meaning it is just the essentials needed for generic stuff. No CMRF code here!
+
+# What is this?
+This little project of mine is essentially the framework I originally made for CMRF v3, now open source!
+It is bugtested and semi produced by ai with refinements from me. The A Variant is the Web panel, the Loader, and the HE:Adonis Plugins to make it work with my API.
+
+# AI you say? How dare you!
+I swear to god if any of you say that, you can kiss the open source goodbye. 
+I put my soul into this, and I used ai to bug test and help me with some stuff. 
+After all I am using this as a learning opportunity. It's not like I asked ai to generate the whole thing.
+
+# How do I use this?
+Glad you asked! Just read whats in the scripts! There's comments I got ai to write so I wouldn't have to.
+Just follow it's instructions.
+
