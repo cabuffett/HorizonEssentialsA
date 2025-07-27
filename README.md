@@ -16,3 +16,9 @@ After all I am using this as a learning opportunity. It's not like I asked ai to
 Glad you asked! Just read whats in the scripts! There's comments I got ai to write so I wouldn't have to.
 Just follow it's instructions.
 
+# Credits
+
+98.css: https://jdan.github.io/98.css/
+Maxwell for bugtesting the B Variant.
+Node.js for the backend.
+
