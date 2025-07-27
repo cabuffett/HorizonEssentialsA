@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adonis Admin Panel</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <style>
+        body {
+            background-color: #008080;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="window container">
+    <div class="title-bar">
+        <div class="title-bar-text">HorizonEssentials Game Event Controller</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body">
+        <p>Use this panel to trigger in-game events via Adonis.</p>
+        <fieldset>
+            <legend>Events</legend>
+            <div class="field-row-stacked" style="width: 200px">
+                <label for="event-name">Event Name:</label>
+                <input id="event-name" type="text" value="MeteorShower" />
+            </div>
+            <p>Click the button below to start the selected event.</p>
+            <button id="startEventBtn">🚀 Start In-Game Event</button>
+        </fieldset>
+         <div id="status" style="margin-top: 10px;"></div>
+    </div>
+</div>
+
+<script>
+    const startEventButton = document.getElementById('startEventBtn');
+    const eventNameInput = document.getElementById('event-name');
+    const statusDiv = document.getElementById('status');
+
+    // IMPORTANT: Replace this with the URL of your intermediary server
+    const serverUrl = 'https://your-glitch-project-name.glitch.me/set-event';
+    
+    // IMPORTANT: Use a long, random, and secret key
+    const secretApiKey = 'REPLACE_THIS_WITH_YOUR_SECRET_KEY';
+
+    startEventButton.addEventListener('click', () => {
+        const eventName = eventNameInput.value;
+        if (!eventName) {
+            alert('Please enter an event name.');
+            return;
+        }
+
+        statusDiv.textContent = 'Sending command...';
+
+        fetch(serverUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                apiKey: secretApiKey,
+                command: eventName
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            statusDiv.textContent = `✅ Success: ${data.message}`;
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            statusDiv.textContent = '❌ Error: Could not send command.';
+        });
+    });
+</script>
+
+</body>
+</html>
